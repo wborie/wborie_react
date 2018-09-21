@@ -384,7 +384,7 @@ class Dijkstra extends Component {
     }
 
     callApi = async(dijkstraPackage) => {
-        let result = await fetch("http://localhost/site_api/dijkstra.php", {method: "POST", headers: {"Accept": "application/json"}, 
+        let result = await fetch("http://www.willborie.com/site_api/dijkstra.php", {method: "POST", headers: {"Accept": "application/json"}, 
             body: dijkstraPackage})
             .then(response => response.json())
             .catch(error => console.log(error))
