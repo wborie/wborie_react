@@ -6,12 +6,9 @@ class About extends Component {
     return (
       <div className="container-fluid">
         <h1>
-          About
+          About Me Page (Coming Soon)
         </h1>
 
-        <p>
-          Look at all of this nonexistent content!
-        </p>
       </div>
     );
   }
