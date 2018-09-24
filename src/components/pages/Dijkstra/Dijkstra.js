@@ -177,6 +177,19 @@ class Dijkstra extends Component {
                 if (this.state.selectedNodeName == value.name) this.setState({ selectedNodeName: null });
             }
         }
+        if (this.state.selectedNodeName != null && this.state.mode == moveNodesMode) { // Allow the selected node to move if the moveNodeKey has been pressed
+            if (!nodeMap.get(this.state.selectedNodeName).isMoving) {
+                nodeMap.get(this.state.selectedNodeName).allowMoving();
+                this.drawCanvas(nodeMap, this.state.canvas, this.state.context);
+            }
+            else if (nodeMap.get(this.state.selectedNodeName).canBePlaced) {
+                nodeMap.get(this.state.selectedNodeName).stopMoving();
+                nodeMap.get(this.state.selectedNodeName).deselect();
+                this.setState({ selectedNodeName: null });
+                this.drawCanvas(nodeMap, this.state.canvas, this.state.context);
+            }
+            else console.log("Can't place here");
+        }
     }
 
     onKeyPress(event, nodeMap) {
@@ -241,7 +254,7 @@ class Dijkstra extends Component {
         context.clearRect(0, 0, canvas.width, canvas.height);
         this.drawEdges(nodeMap, canvas, context);
         this.drawNodes(nodeMap, canvas, context);
-        this.drawMode(nodeMap, canvas, context);
+        // this.drawMode(nodeMap, canvas, context);
     }
 
     drawMode(nodeMap, canvas, context) {
@@ -380,6 +393,21 @@ class Dijkstra extends Component {
                 this.executeDijkstra(this.state.nodeMap, this.state.edgeMap, this.state.nodeMap.get(this.state.dijkstraStart));
             }
         }
+        else if (event.target.name == "SwitchModeButton") {
+            if (this.state.selectedNodeName != null && this.state.mode == moveNodesMode) {
+                this.state.nodeMap.get(this.state.selectedNodeName).stopMoving();
+                this.state.nodeMap.get(this.state.selectedNodeName).deselect();    
+            }
+            else if (this.state.selectedNodeName != null && this.state.mode == viewMode) {
+                if (!this.state.nodeMap.get(this.state.selectedNodeName).isMoving) {
+                    this.state.nodeMap.get(this.state.selectedNodeName).allowMoving();
+                }
+            }
+            this.drawCanvas(this.state.nodeMap, this.state.canvas, this.state.context);
+
+            if (this.state.mode == viewMode) this.setState({ mode: moveNodesMode});
+            else this.setState({ mode: viewMode });
+        }
         event.preventDefault();
     }
 
@@ -443,6 +471,7 @@ class Dijkstra extends Component {
 
     render() {
         let displayWeight = (this.state.addRemoveEdgeSwitch == "Add") ? "inline-block" : "none";
+        let currentMode = (this.state.mode == viewMode) ? "View Mode" : "Move nodes mode";
         return (
             <div>
                 <div style={{backgroundColor: "lightblue", width: window.innerWidth, height: "50px"}}>
@@ -496,6 +525,12 @@ class Dijkstra extends Component {
                         <label>
                             <input name = "dijkstraStart" type = "text" value = {this.state.edgeName} onChange = {this.handleChange} 
                             style = {{width: "60px"}}/>
+                        </label>
+                    </form>
+                    <form name = "SwitchModeButton" onSubmit={this.handleSubmit} style={{paddingTop: "10px", paddingLeft: "100px", display: "inline-block"}}>
+                        <label>
+                            <input name = "SwitchModeButton" type = "submit" value = {currentMode}
+                            style = {{width: "200px"}}/>
                         </label>
                     </form>
                 </div>
