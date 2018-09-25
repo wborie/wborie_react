@@ -31,10 +31,24 @@ header {
       }
 
       a {
-        font-size: 19px;
+        font-size: 22px;
+        font-family: Georgia;
         line-height: normal;
-        color: $white;
+        color: #ED2A72;
+        text-decoration: none;
       }
+
+      a:visited {
+        color: #ED2A72;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #38bdff;
+        text-decoration: none;
+      }
+
+
     }
   }
 }
