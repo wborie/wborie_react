@@ -1,12 +1,15 @@
 {
-  "main.css": "static/css/main.4123001c.css",
-  "main.css.map": "static/css/main.4123001c.css.map",
-  "main.js": "static/js/main.389b3ee4.js",
-  "main.js.map": "static/js/main.389b3ee4.js.map",
-  "static/js/0.bfca0daa.chunk.js": "static/js/0.bfca0daa.chunk.js",
-  "static/js/0.bfca0daa.chunk.js.map": "static/js/0.bfca0daa.chunk.js.map",
-  "static/js/1.bc16d38b.chunk.js": "static/js/1.bc16d38b.chunk.js",
-  "static/js/1.bc16d38b.chunk.js.map": "static/js/1.bc16d38b.chunk.js.map",
+  "main.css": "static/css/main.5da590dd.css",
+  "main.css.map": "static/css/main.5da590dd.css.map",
+  "main.js": "static/js/main.9532b3e8.js",
+  "main.js.map": "static/js/main.9532b3e8.js.map",
+  "static/js/0.da97bc9b.chunk.js": "static/js/0.da97bc9b.chunk.js",
+  "static/js/0.da97bc9b.chunk.js.map": "static/js/0.da97bc9b.chunk.js.map",
+  "static/js/1.b9783621.chunk.js": "static/js/1.b9783621.chunk.js",
+  "static/js/1.b9783621.chunk.js.map": "static/js/1.b9783621.chunk.js.map",
+  "static/media/Github.png": "static/media/Github.f5f56696.png",
+  "static/media/LinkedIn.png": "static/media/LinkedIn.f08c524d.png",
   "static/media/Logo.png": "static/media/Logo.a193719a.png",
+  "static/media/Me.jpg": "static/media/Me.4cb659f3.jpg",
   "static/media/Resume.pdf": "static/media/Resume.672b3a19.pdf"
 }
