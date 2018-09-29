@@ -17,9 +17,6 @@ class Contact extends Component {
                     <p>
                         Email: borie@usc.edu
                     </p>
-                    <p>
-                        Phone: (650) 739-5996
-                    </p>
                     <div style = {{position:"relative"}}>
                         <a href = "https://www.linkedin.com/in/will-borie-784011156/">
                         <img src = {linkedInLogo} style = {{width:"50px", height:"50px"}}/>

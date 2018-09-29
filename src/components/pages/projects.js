@@ -19,6 +19,9 @@ class Projects extends Component {
                 <p style={{position: "fixed", top:"32%", left:"4.5%"}}>
                     <Link to="/Projects/DijkstraDefault">Dijkstra (Use a default graph)</Link>
                 </p>
+                <p style={{position:"fixed", top:"37%", left:"7%"}}>
+                    <Link to="/Projects/DijkstraExplanation">Project Explanation</Link>
+                </p>
 
                 <h3 style={{position: "fixed", top:"40%", left:"9%"}}> 
                     Kruskal's
@@ -37,8 +40,8 @@ class Projects extends Component {
                 <h3 style={{position: "fixed", top:"20%", left:"40%"}}> 
                     RSA
                 </h3>
-                <p style={{position: "fixed", top:"28%", left:"36%"}}>
-                    (Coming by Oct 7, 2017)
+                <p style={{position: "fixed", top:"27%", left:"34%"}}>
+                    (Coming by Oct 9, 2018)
                 </p>
 
 

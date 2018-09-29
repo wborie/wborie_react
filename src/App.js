@@ -11,6 +11,7 @@ import Contact from './components/pages/contact';
 import Dijkstra from './components/pages/Dijkstra/Dijkstra';
 import BouncingCircles from './components/pages/BouncingCircles';
 import DijkstraDefault from './components/pages/Dijkstra/DijkstraDefault';
+import DijkstraExplanation from './components/pages/Dijkstra/DijkstraExplanation';
 
 import './Assets/css/default.min.css';
 
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path='/Projects/Dijkstra' component={Dijkstra} />
           <Route exact path='/Secret/BouncingCircles' component={BouncingCircles} />
           <Route exact path='/Projects/DijkstraDefault' component={DijkstraDefault} />
+          <Route exact path='/Projects/DijkstraExplanation' component={DijkstraExplanation} />
 
         </div>
       </Router>
