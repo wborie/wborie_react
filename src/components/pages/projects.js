@@ -41,7 +41,7 @@ class Projects extends Component {
                     RSA
                 </h3>
                 <p style={{position: "fixed", top:"27%", left:"34%"}}>
-                    (Coming by Oct 9, 2018)
+                    (Coming soon)
                 </p>
 
 
